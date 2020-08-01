@@ -14,7 +14,7 @@ from animal import Animal
 
 class Cat(Animal):
 
-    __slots__ = ('color', 'genre', "name", "speed")
+    # __slots__ = ('color', 'genre', "name", "speed")
 
     def __init__(self, name, speed, color, genre):
         super().__init__(name, speed)

@@ -32,19 +32,24 @@ class Animal(object):
     def getSpeedBehavior(self):
         pass
 
+    # 使用装饰器的时候，需要注意：
+    # 1. 装饰器名，函数名需要一直(_speed与属性名一致，可以直接传参数)
+    # 2. property需要先声明，再写setter，顺序不能倒过来
+    # 3. 是因为内部的self._speed1属性名和def _speed的名称必须不同，
+    # 否则会导致一直在循环
     # 读
     @property
     def _speed(self):
-        return self.__speed
+        return self._speed1
 
     # 写
     @_speed.setter
     def _speed(self, val):
         if val < 0:
             raise ValueError('speed value is negative')
-        self.__speed = val
+        self._speed1 = val
 
-# a = Animal("xiao", 100)
-# a.score = 10
+
+
 
 
