@@ -36,7 +36,8 @@ class Animal(object):
     # 1. 装饰器名，函数名需要一直(_speed与属性名一致，可以直接传参数)
     # 2. property需要先声明，再写setter，顺序不能倒过来
     # 3. 是因为内部的self._speed1属性名和def _speed的名称必须不同，
-    # 否则会导致一直在循环
+    # 否则会导致一直在循环, 装饰器的最大循环次数默认是999
+
     # 读
     @property
     def _speed(self):
