@@ -32,6 +32,9 @@ print(jiafeimao)
 
 if __name__ == "__main__":
     jiafeimao = Cat('jiafeimao',2,'gray','CatGenre')
+    Cat.age = 1
+    jiafeimao.age = 3
+    print(jiafeimao.age)
     haiying = Bird('haiying',40,'blue','BirdGenre')
 
     Manager(jiafeimao).recordTime()
