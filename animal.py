@@ -38,6 +38,7 @@ class Animal(object):
     # 3. 是因为内部的self._speed1属性名和def _speed的名称必须不同，
     # 否则会导致一直在循环, 装饰器的最大循环次数默认是999
 
+
     # 读
     @property
     def _speed(self):
